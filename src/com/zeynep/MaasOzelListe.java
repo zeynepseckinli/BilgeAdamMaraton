@@ -4,11 +4,6 @@ public class MaasOzelListe {
 	double[] maasDizisi;
 	int boyut = 0;
 
-	/**
-	 * dizinin içine eklenilecek sayı bilgisini alarak diziye ekleme yapar.
-	 * 
-	 * @param sayi -> eklemek istediğiniz sayıyı giriniz.
-	 */
 	public void add(double maas) {
 		double[] tmp;
 		if (maasDizisi == null) {

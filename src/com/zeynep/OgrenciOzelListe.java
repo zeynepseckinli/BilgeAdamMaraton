@@ -5,11 +5,6 @@ public class OgrenciOzelListe {
 	String[] ogrenciDizisi;
 	int boyut = 0;
 
-	/**
-	 * dizinin içine eklenilecek sayı bilgisini alarak diziye ekleme yapar.
-	 * 
-	 * @param sayi -> eklemek istediğiniz sayıyı giriniz.
-	 */
 	public void add(String isim) {
 		String[] tmp;
 		if (ogrenciDizisi == null) {

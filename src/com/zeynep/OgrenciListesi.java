@@ -50,24 +50,22 @@ public class OgrenciListesi {
 				if (ogrenciOzelListe.ogrenciDizisi[i].equalsIgnoreCase(ogrenci)) {
 
 					System.out.print("Yürümekten hoşlanır mısın[E/H]?");
-					String kontrol = sc.nextLine();
-					if (sc.nextLine().equalsIgnoreCase("e")) {
+					String kontrol = sc.nextLine().toLowerCase();
+					if (kontrol.startsWith("E") == true) {
 						hobiler[i][0] = true;
 					}
 					System.out.print("Kitap Okumaktan hoşlanır mısın[E/H]?");
-					if (sc.nextLine().equalsIgnoreCase("e")) {
-						hobiler[i][1] = true;
-					}
-					System.out.print("Spor rutinlerin var mı[E/H]?");
-					if (sc.nextLine().equalsIgnoreCase("e")) {
-						hobiler[i][2] = true;
-					}
+					String kontrol2 = sc.nextLine().toLowerCase();
+					hobiler[i][1] = (kontrol2.startsWith("E"));
 				}
-				System.out.print("Kod yazmaktan hoşlanır mısın[E/H]?");
-				if (sc.nextLine().equalsIgnoreCase("e")) {
-					hobiler[i][3] = true;
-				}
-
+				System.out.print("Spor rutinlerin var mı[E/H]?");
+				String kontrol3 = sc.nextLine().toLowerCase();
+				hobiler[i][2] = (kontrol3.startsWith("E"));
+			}
+			System.out.print("Kod yazmaktan hoşlanır mısın[E/H]?");
+			String kontrol4 = sc.nextLine().toLowerCase();
+			if (kontrol4.startsWith("E") == true) {
+				hobiler[i][3] = true;
 			}
 
 			break;
@@ -104,21 +102,8 @@ public class OgrenciListesi {
 		default:
 			System.err.println("Lütfen geçerli bir seçim yapınız.\n");
 		}
+
 	}
-
-//	public boolean[][] hobileriSor(String isim, String cevap){
-//		OgrenciOzelListe ogrenciOzelList = new OgrenciOzelListe();
-//		boolean[][] hobiler= new boolean[ogrenciOzelList.boyut][4];
-//		return hobiler[][];
-//	}
-
-//	public boolean[][] hobiKontrol(String kontrol,int index,int i){
-//		boolean[][] array=new boolean[ogrenciOzelListe.boyut][4];
-//		if (kontrol.equalsIgnoreCase("e")) {
-//			array[index][i] = true;
-//		} 
-//		return array;
-//	}
 
 	public int secim() {
 		Scanner sc = new Scanner(System.in);
