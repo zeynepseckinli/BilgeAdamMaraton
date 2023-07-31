@@ -50,24 +50,30 @@ public class OgrenciListesi {
 				if (ogrenciOzelListe.ogrenciDizisi[i].equalsIgnoreCase(ogrenci)) {
 
 					System.out.print("Yürümekten hoşlanır mısın[E/H]?");
-					String kontrol = sc.nextLine().toLowerCase();
-					if (kontrol.startsWith("E") == true) {
+					String kontrol = sc.nextLine().toUpperCase();
+					boolean knt = kontrol.startsWith("E");
+					if (knt == true) {
 						hobiler[i][0] = true;
 					}
 					System.out.print("Kitap Okumaktan hoşlanır mısın[E/H]?");
-					String kontrol2 = sc.nextLine().toLowerCase();
-					hobiler[i][1] = (kontrol2.startsWith("E"));
-				}
-				System.out.print("Spor rutinlerin var mı[E/H]?");
-				String kontrol3 = sc.nextLine().toLowerCase();
-				hobiler[i][2] = (kontrol3.startsWith("E"));
-			}
-			System.out.print("Kod yazmaktan hoşlanır mısın[E/H]?");
-			String kontrol4 = sc.nextLine().toLowerCase();
-			if (kontrol4.startsWith("E") == true) {
-				hobiler[i][3] = true;
-			}
+					String kontrol2 = sc.nextLine().toUpperCase();
+					if (kontrol2.startsWith("E") == true) {
+						hobiler[i][1] = true;
+					}
 
+					System.out.print("Spor rutinlerin var mı[E/H]?");
+					String kontrol3 = sc.nextLine().toUpperCase();
+					if (kontrol3.startsWith("E") == true) {
+						hobiler[i][2] = true;
+					}
+
+					System.out.print("Kod yazmaktan hoşlanır mısın[E/H]?");
+					String kontrol4 = sc.nextLine().toUpperCase();
+					if (kontrol4.startsWith("E") == true) {
+						hobiler[i][3] = true;
+					}
+				}
+			}
 			break;
 
 		case 3:
