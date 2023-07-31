@@ -1,6 +1,5 @@
 package com.zeynep;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class OgrenciListesi {
@@ -37,7 +36,6 @@ public class OgrenciListesi {
 				ogrenciOzelListe.add(isim);
 			}
 
-			System.out.println(Arrays.toString(ogrenciOzelListe.getList()));
 			break;
 
 		case 2:
@@ -83,7 +81,7 @@ public class OgrenciListesi {
 				double maas = sc.nextInt();
 				maasOzelListe.add(maas);
 			}
-			System.out.println(Arrays.toString(maasOzelListe.getList()));
+
 			break;
 
 		case 4:
